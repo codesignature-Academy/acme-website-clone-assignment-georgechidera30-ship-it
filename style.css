@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: screen;
+  height: 100vh;
+  background-color: #fffeff;
+}
+header {
+  width: 100vw;
+  height: 70px;
+  background-color: #0d9488;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.nav{
+  font-size: 35px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+header ul {
+  display: flex;
+  font-size: larger;
+  gap: 50px;
+  list-style-type: none;
+  justify-content: right;
+  padding: 15px;
+}
+main {
+  width: screen;
+}
+
+#hero {
+  margin-top: 85px;
+}
+.hero-all {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.hero-text {
+  width: 30vw;  
+}
+.hero-text h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 55px;
+  font-weight: 1000px;
+  text-align: left;
+}
+.hero-text p {
+  font-size: 25px;
+}
+#our-rockets {
+  margin-top: 100px;
+  width: inherit;
+}
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: 400px;
+  text-align: center;
+}
+.rockets ul {
+  margin-top: 30px;
+  display: flex;
+  padding: 3% 10% ;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.rocket-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 250px;
+  border: 1px solid #0f172a;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  padding: 35px; 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /
+}
+.rocket-image img {
+  width: 142px;
+  height: 112px;
+  }
+.rocket-image:hover {
+  background-color: #0d9488;
+  transform: rotateY(360deg);
+  transition: 3s;
+}
+.rocket-image p{
+  font-size: 30px;
+  text-align: center;
+}
+#testimonials {
+  width: screen;
+  margin:60px 200px;
+}
+#testimonials figure {
+  width: 65vw;
+  margin-top: 40px;
+}
+#testimonials blockquote {
+  position: relative;
+  background-color: #0d9488;
+  color: white;
+  border-radius: 1.5rem;
+  padding: 3rem 2rem 3rem 3.5rem;
+}
+
+.test {
+  margin-top: 0.5rem;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  line-height: 1.15;
+}
+.italic {
+  font-style: italic;
+}
+
+#testimonials figcaption {
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #64748b;
+}
+#contact {
+  width: screen;
+  margin:60px 200px;
+  padding: 1.5rem;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* max-width: 64rem;  */
+  width: 800px;
+  margin: 0 auto;
+  font-size: 1.25rem; 
+}
+
+#contact input,
+#contact textarea {
+  border: 1px solid #0f172a;
+  border-radius: 0.75rem; 
+  padding: 0.75rem;
+  color: #000;
+  font-size: inherit;
+}
+
+#contact button {
+  width: 150px; 
+  border: 1px solid #0f172a;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  background-color: #0f766e; 
+  color: #ffffff;
+  font-size: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #0d9488; 
+}
+
+#contact button:active {
+  background-color: #14b8a6; 
+}
+
+#footer {
+  width: screen;
+  background-color: #0f766e;
+  color: white;
+  /* padding: 1rem 7rem; */
+}
+
+.footer-all{
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-address a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav { 
+ display: flex;
+ flex-direction: column;
+} 
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+.menu-btn{
+  display: none;
+}
+
+/* ================================
+   💻 Screen up to 425px (Mobile L)
+   ================================ */
+@media screen and (max-width:425px) {
+  .navs{
+    display: none;
+  }
+  .menu-btn{
+    display: block;
+    font-size: 40px;
+    color: #fff;
+  }
+  .hero-all{
+    flex-direction: column-reverse;
+  }
+  .hero-text{
+    width: 90vw;
+    text-align: center;
+  }
+  .hero-text h1{
+    font-size: 40px;
+    text-align: center;
+  }
+  .hero-img{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-img img{
+    width: 200px;
+  }
+  .rockets ul{
+    flex-direction: column;
+    gap: 20px;
+  }
+  #testimonials{
+    margin: 60px 20px;
+  }
+  #testimonials figure{
+    width: 90vw;
+    margin: auto;
+  }
+  #contact form{
+    width: 350px;
+  }
+  #contact{
+    margin: 60px 20px;
+  }
+  .footer-nav{
+    display: none;
+  }
+  .footer-all{
+    flex-direction: column;
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-right{
+    margin-left: 80%;
+    width: 50vw;
+  }
+}
